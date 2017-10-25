@@ -1,6 +1,16 @@
 CREATE TABLE connections (id INTEGER, first_name TEXT, last_name TEXT, email_address TEXT, company TEXT, position TEXT, connected_on TEXT, tags TEXT);
 
+# Converting the CSV file into an SQL table
 SET count = 1
 while count <= 5000:
 INSERT INTO connections (id, first_name, last_name, email_address, company, position, connected_on, tags) VALUES (count, 'fn', 'ln', 'ea', 'com', 'pos', 'cn', 'ta');
 count += 1
+
+# Basic Query for the SQL table
+First Name = raw_input("First Name: ")
+Last Name = raw_input("Last Name: ")
+Email Address = raw_input("Email Address: ")
+Company = raw_input("Company: ")
+Postion = raw_input("Position: ")
+Connected On = raw_input("Connected On: ")
+Tags = raw_input("Tags: ")
