@@ -7,7 +7,7 @@ INSERT INTO connections (id, first_name, last_name, email_address, company, posi
 count += 1
 
 # Data Lists for Companies, Positions etc.
-blattler = ["Daniel Blattler", "Nathalie Breuer", "Mrinal Madina", "David Brown"]
+blattler = ["Daniel Blattler", "Nathalie Breuer", "Mrinal Madina", "David Brown", "Stephan Hammes"]
 directors = ["Daniel Blattler"]
 project_managers = ["Nathalie Breuer"]
 
