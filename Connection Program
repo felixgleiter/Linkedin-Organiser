@@ -34,11 +34,22 @@ def Query():
       
       for key in blattler:
       
-        if Surname == blattler[key].lower() and Surname == project_managers[key].lower():
-          print key + blattler[key]
+        if Surname == blattler[key].lower():
+          
+          for key2 in project_managers:
+            
+            if Surname == project_managers[key2].lower():
+              
+              print key2 + blattler[key2]
           
         elif Surname == "":
-          print key + blattler[key]
+          
+          for key in blattler:
+            
+            if key in project_managers:
+              
+              print key + blattler[key]
+              break #Need to figure out where to put this break, currently just replicates Nathalie Breuer!
     
     elif Position == "":
       Surname = raw_input("Surname: ").lower()
