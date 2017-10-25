@@ -9,10 +9,10 @@ count += 1"""
 
 # Data Lists for Companies, Positions etc.
 
-blattler = {'Daniel ' : 'Blattler', 'Nathalie ' : 'Breuer', 'Mrinal ' : 'Madina', 'David ' : 'Brown', 'Stephan ' : 'Hammes'}
+blattler = {'Daniel ' : 'Blattler', 'Nathalie ' : 'Breuer', 'Mrinal ' : 'Madina', 'David ' : 'Brown', 'Stephan ' : 'Hammes', 'Nina ' : 'Schu'}
 Companies = [blattler]
 directors = {'Daniel ' : 'Blattler'}
-project_managers = {'Nathalie ' : 'Breuer'}
+project_managers = {'Nathalie ' : 'Breuer', 'Nina ' : 'Schu'}
 Positions = [directors, project_managers]
 
 # Basic Query for the SQL table
@@ -30,7 +30,15 @@ def Query():
       return "Daniel Blattler"
     
     elif Position == "project manager":
-      return "Nathalie Breuer"
+      Surname = raw_input("Surname: ").lower()
+      
+      for key in blattler:
+      
+        if Surname == blattler[key].lower() and Surname == project_managers[key].lower():
+          print key + blattler[key]
+          
+        elif Surname == "":
+          print key + blattler[key]
     
     elif Position == "":
       Surname = raw_input("Surname: ").lower()
