@@ -16,47 +16,73 @@ Positions = [directors, project_managers]
 
 # Basic Query for the SQL table
 def Query():
+  
   print "Hello! Please leave any unknown values blank."
+  
   Company = raw_input("Company: ").lower()
+  
   if Company == "blattler":
     Position = raw_input("Position: ").lower()
+    
     if Position == "director":
       return "Daniel Blattler"
+    
     elif Position == "project manager":
       return "Nathalie Breuer"
+    
     elif Position == "":
       Surname = raw_input("Surname: ").lower()
+      
       for key in blattler:
+        
         if Surname == blattler[key].lower():
           print key + blattler[key]
+        
         elif Surname == "":
-            print key + blattler[key]
+          print key + blattler[key]
+          
   elif Company == "":
     Position = raw_input("Position: ").lower()
+    
     if Position == "director":
       Surname = raw_input("Surname: ").lower()
+      
       for key in directors:
+        
         if Surname == directors[key].lower():
           print key + directors[key]
+          
         elif Surname == "":
+          
           for key in directors:
             print key + directors[key]
+            
     elif Position == "project manager":
       Surname = raw_input("Surname: ").lower()
+      
       for key in project_managers:
+        
         if Surname == project_managers[key].lower():
           print key + project_managers[key]
+          
         elif Surname == "":
+          
           for key in project_managers:
             print key + project_managers[key]
+            
     elif Position == "":
       Surname = raw_input("Surname: ").lower()
-      for company in Companies: 
+      
+      for company in Companies:
+        
         for key in company:
+          
           if Surname == company[key].lower():
             print key + company[key]
+            
           elif Surname == "":
             return "I can't help you if you don't give me any information."
+          
   else:
     return "I'm afraid I don't know that company. Please restart and try again."
 
