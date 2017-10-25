@@ -7,10 +7,28 @@ INSERT INTO connections (id, first_name, last_name, email_address, company, posi
 count += 1
 
 # Basic Query for the SQL table
-First Name = raw_input("First Name: ")
-Last Name = raw_input("Last Name: ")
-Email Address = raw_input("Email Address: ")
-Company = raw_input("Company: ")
-Postion = raw_input("Position: ")
-Connected On = raw_input("Connected On: ")
-Tags = raw_input("Tags: ")
+blattler = ["Daniel Blattler"]
+directors = ["Daniel Blattler"]
+def Query(Company, Position):
+  print "Hello! Please leave any unknown values blank."
+  Company = raw_input("Company: ").lower()
+  if Company == "blattler":
+    Position = raw_input("Position: ").lower()
+    if Position == "director":
+      return "Daniel Blattler"
+    elif Position == "":
+      return blattler
+  elif Company == "umlaut":
+    Position = raw_input("Position: ").lower()
+  elif Company == "ambit":
+    Position = raw_input("Position: ").lower()
+  elif Company == "wisley":
+    Position = raw_input("Position: ").lower()
+  elif Company == "":
+    Position = raw_input("Position: ").lower()
+    if Position == "director":
+      return directors
+  else:
+    return "I'm afraid I don't know that company. Please restart and try again."
+
+print Query("","")
