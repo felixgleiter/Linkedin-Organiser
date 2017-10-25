@@ -9,7 +9,7 @@ count += 1
 # Basic Query for the SQL table
 blattler = ["Daniel Blattler", "Nathalie Breuer", "Mrinal Madina", "David Brown"]
 directors = ["Daniel Blattler"]
-project managers = ["Nathalie Breuer"]
+project_managers = ["Nathalie Breuer"]
 def Query(Company, Position):
   print "Hello! Please leave any unknown values blank."
   Company = raw_input("Company: ").lower()
@@ -18,7 +18,7 @@ def Query(Company, Position):
     if Position == "director":
       return "Daniel Blattler"
     elif Position == "project manager":
-      return == "Nathalie Breuer"
+      return "Nathalie Breuer"
     elif Position == "":
       return blattler
   elif Company == "umlaut":
@@ -32,7 +32,7 @@ def Query(Company, Position):
     if Position == "director":
       return directors
     if Position == "project manager":
-      return project managers
+      return project_managers
   else:
     return "I'm afraid I don't know that company. Please restart and try again."
 
