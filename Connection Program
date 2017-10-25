@@ -6,10 +6,12 @@ while count <= 5000:
 INSERT INTO connections (id, first_name, last_name, email_address, company, position, connected_on, tags) VALUES (count, 'fn', 'ln', 'ea', 'com', 'pos', 'cn', 'ta');
 count += 1
 
-# Basic Query for the SQL table
+# Data Lists for Companies, Positions etc.
 blattler = ["Daniel Blattler", "Nathalie Breuer", "Mrinal Madina", "David Brown"]
 directors = ["Daniel Blattler"]
 project_managers = ["Nathalie Breuer"]
+
+# Basic Query for the SQL table
 def Query(Company, Position):
   print "Hello! Please leave any unknown values blank."
   Company = raw_input("Company: ").lower()
