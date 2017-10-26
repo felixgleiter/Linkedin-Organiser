@@ -1,0 +1,3 @@
+def input(data):
+
+  entry = raw_input(data).lower()
