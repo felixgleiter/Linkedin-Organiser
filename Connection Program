@@ -19,7 +19,7 @@ Positions = [directors, project_managers]
 
 def input(data):
 
-  entry = raw_input(data).lower()
+  raw_input(data).lower()
   
 # Basic Query for the SQL table
 
@@ -27,16 +27,19 @@ def Query():
   
   print "Hello! Please leave any unknown values blank."
   
-  Company = input("Company: ")
+  Company = raw_input("Company: ").lower()
+  #Company = input("Company: ")
   
   if Company == "blattler":
-    Position = input("Position: ")
+    Position = raw_input("Position: ").lower()
+    #Position = input("Position: ")
     
     if Position == "director":
       return "Daniel Blattler"
     
     elif Position == "project manager":
-      Surname = input("Surname: ")
+      Surname = raw_input("Surname: ").lower()
+      #Surname = input("Surname: ")
       
       for key in blattler and project_managers:
       
@@ -49,7 +52,8 @@ def Query():
           print key + project_managers[key]
 
     elif Position == "":
-      Surname = input("Surname: ")
+      Surname = raw_input("Surname: ").lower()
+      #Surname = input("Surname: ")
       
       for key in blattler:
         
@@ -60,10 +64,12 @@ def Query():
           print key + blattler[key]
           
   elif Company == "":
-    Position = input("Position: ")
+    Position = raw_input("Position: ").lower()
+    #Position = input("Position: ")
     
     if Position == "director":
-      Surname = input("Surname: ")
+      Surname = raw_input("Surname: ").lower()
+      #Surname = input("Surname: ")
       
       for key in directors:
         
@@ -76,7 +82,8 @@ def Query():
             print key + directors[key]
             
     elif Position == "project manager":
-      Surname = input("Surname: ")
+      Surname = raw_input("Surname: ").lower()
+      #Surname = input("Surname: ")
       
       for key in project_managers:
         
@@ -89,7 +96,8 @@ def Query():
             print key + project_managers[key]
             
     elif Position == "":
-      Surname = input("Surname: ")
+      Surname = raw_input("Surname: ").lower()
+      #Surname = input("Surname: ")
       
       for company in Companies:
         
