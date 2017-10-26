@@ -27,16 +27,16 @@ def Query():
   
   print "Hello! Please leave any unknown values blank."
   
-  input("Company: ")
+  Company = input("Company: ")
   
   if Company == "blattler":
-    input("Position: ")
+    Position = input("Position: ")
     
     if Position == "director":
       return "Daniel Blattler"
     
     elif Position == "project manager":
-      input("Surname: ")
+      Surname = input("Surname: ")
       
       for key in blattler and project_managers:
       
@@ -49,7 +49,7 @@ def Query():
           print key + project_managers[key]
 
     elif Position == "":
-      input("Surname: ")
+      Surname = input("Surname: ")
       
       for key in blattler:
         
@@ -60,10 +60,10 @@ def Query():
           print key + blattler[key]
           
   elif Company == "":
-    input("Position: ")
+    Position = input("Position: ")
     
     if Position == "director":
-      input("Surname: ")
+      Surname = input("Surname: ")
       
       for key in directors:
         
@@ -76,7 +76,7 @@ def Query():
             print key + directors[key]
             
     elif Position == "project manager":
-      input("Surname: ")
+      Surname = input("Surname: ")
       
       for key in project_managers:
         
@@ -89,7 +89,7 @@ def Query():
             print key + project_managers[key]
             
     elif Position == "":
-      input("Surname: ")
+      Surname = input("Surname: ")
       
       for company in Companies:
         
