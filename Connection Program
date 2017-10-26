@@ -77,8 +77,7 @@ def Query():
           print key + project_managers[key]
           
         elif Surname == "":
-          
-            print key + project_managers[key]
+          print key + project_managers[key]
             
     elif Position == "":
       Surname = raw_input("Surname: ").lower()
