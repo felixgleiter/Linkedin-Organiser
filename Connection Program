@@ -25,7 +25,7 @@ def Query():
   
   for c in Companies:
     
-    if Company == Companies[c]: # Why do these not match up?!
+    if Company == Companies[c]: # Why do these not match up?! Use frozenset() on the Companies dict?
       Position = raw_input("Position: ").lower()
     
       if Position == "director":
