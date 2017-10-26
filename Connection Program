@@ -14,12 +14,13 @@ Companies = [blattler]
 directors = {'Daniel ' : 'Blattler'}
 project_managers = {'Nathalie ' : 'Breuer', 'Nina ' : 'Schu'}
 Positions = [directors, project_managers]
+Company = ""
 
 # Functions to be embedded into Query():
 
 def input(data):
 
-  raw_input(data).lower()
+  raw_input(str(data) + ": ").lower()
   
 # Basic Query for the SQL table
 
@@ -28,7 +29,7 @@ def Query():
   print "Hello! Please leave any unknown values blank."
   
   Company = raw_input("Company: ").lower()
-  #Company = input("Company: ")
+  #input(Company)
   
   if Company == "blattler":
     Position = raw_input("Position: ").lower()
