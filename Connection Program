@@ -10,10 +10,10 @@ count += 1"""
 # Data Lists for Companies, Positions etc.
 
 blattler = {'Daniel ' : 'Blattler', 'Nathalie ' : 'Breuer', 'Mrinal ' : 'Madina', 'David ' : 'Brown', 'Stephan ' : 'Hammes', 'Nina ' : 'Schu'}
-Companies = {blattler : 'blattler'}
-directors = {'Daniel ' : 'Blattler'}
-project_managers = {'Nathalie ' : 'Breuer', 'Nina ' : 'Schu'}
-Positions = [directors, project_managers]
+Companies = [blattler]
+director = {'Daniel ' : 'Blattler'}
+project_manager = {'Nathalie ' : 'Breuer', 'Nina ' : 'Schu'}
+Positions = [director, project_manager]
   
 # Basic Query for the SQL table
 
@@ -21,72 +21,52 @@ def Query():
   
   print "Hello! Please leave any unknown values blank."
   
-  Company = list(raw_input("Company: ").lower())
+  Company = raw_input("Company: ").lower()
   
   for c in Companies:
     
-    if Company == Companies[c]: # Why do these not match up?! Use frozenset() on the Companies dict?
+    if eval(Company) == c: 
       Position = raw_input("Position: ").lower()
-    
-      if Position == "director":
-        Surname = raw_input("Surname: ").lower()
       
-        for key in c and directors:
+      for p in Positions:
+        
+        if eval(Position) == p:
+          Surname = raw_input("Surname: ").lower()
       
-          if Surname == c[key].lower():
-            print key + c[key]
-    
-      elif Position == "project manager":
-        Surname = raw_input("Surname: ").lower()
+          for key in c and p:
       
-        for key in c and project_managers:
-      
-          if Surname == c[key].lower():
-            print key + c[key]
-          
-          elif Surname == "":
-          
-            print key + project_managers[key]
+            if Surname == c[key].lower():
+              print key + c[key]
+            
+            elif Surname == "":
+              print key + p[key]
 
-      elif Position == "":
-        Surname = raw_input("Surname: ").lower()
+        elif Position == "": #This empty case also doesn't work now!
+          Surname = raw_input("Surname: ").lower()
       
-        for key in c:
+          for key in c:
         
-          if Surname == c[key].lower():
-            print key + c[key]
+            if Surname == c[key].lower():
+              print key + c[key]
         
-          elif Surname == "":
-            print key + c[key]
+            elif Surname == "":
+              print key + c[key]
           
-    elif Company == "":
+    elif eval(Company) == {}: #Now this empty case doesn't work!
       Position = raw_input("Position: ").lower()
     
-      if Position == "director":
+      if eval(Position) == p:
         Surname = raw_input("Surname: ").lower()
       
-        for key in directors:
+        for key in p:
         
-          if Surname == directors[key].lower():
-            print key + directors[key]
+          if Surname == p[key].lower():
+            print key + p[key]
           
           elif Surname == "":
-          
-            for key in directors:
-              print key + directors[key]
+            print key + p[key]
             
-      elif Position == "project manager":
-        Surname = raw_input("Surname: ").lower()
-      
-        for key in project_managers:
-        
-          if Surname == project_managers[key].lower():
-            print key + project_managers[key]
-          
-          elif Surname == "":
-            print key + project_managers[key]
-            
-      elif Position == "":
+      elif Position == "": #Empty case doesn't work!
         Surname = raw_input("Surname: ").lower()
       
         for c in Companies:
@@ -99,7 +79,7 @@ def Query():
             elif Surname == "":
               return "I can't help you if you don't give me any information."
           
-    else:
+    elif eval(Company) not in Companies:
       return "I'm afraid I don't know that company. Please restart and try again."
 
 print Query()
