@@ -9,17 +9,19 @@ count += 1"""
 
 # Data Lists for Companies, Positions etc.
 
-blattler = {'Daniel ' : 'Blattler', 'Nathalie ' : 'Breuer', 'Mrinal ' : 'Madina', 'David ' : 'Brown', 'Stephan ' : 'Hammes', 'Nina ' : 'Schu'}
+empty = {}
+blattler = {'Daniel ' : 'Blattler', 'Nathalie ' : 'Breuer', 'Mrinal ' : 'Madina', 'David ' : 'Brown', 'Stephan ' : 'Hammes', 'Nina ' : 'Schu', 'David ' : 'Keene'}
 Companies = [blattler]
 director = {'Daniel ' : 'Blattler'}
 project_manager = {'Nathalie ' : 'Breuer', 'Nina ' : 'Schu'}
-Positions = [director, project_manager]
+client_relations = {'David ' : 'Keene', 'David ' : 'Brown'} #Two identical keys means only one value is returned!
+Positions = [director, project_manager, client_relations]
   
 # Basic Query for the SQL table
 
 def Query():
   
-  print "Hello! Please leave any unknown values blank."
+  print "Hello! Please type 'empty' where any value is unknown."
   
   Company = raw_input("Company: ").lower()
   
@@ -39,9 +41,9 @@ def Query():
               print key + c[key]
             
             elif Surname == "":
-              print key + p[key]
+              print key + c[key]
 
-        elif Position == "": #This empty case also doesn't work now!
+        elif eval(Position) == empty: 
           Surname = raw_input("Surname: ").lower()
       
           for key in c:
@@ -52,29 +54,29 @@ def Query():
             elif Surname == "":
               print key + c[key]
           
-    elif eval(Company) == {}: #Now this empty case doesn't work!
+    elif eval(Company) == empty: 
       Position = raw_input("Position: ").lower()
-    
-      if eval(Position) == p:
-        Surname = raw_input("Surname: ").lower()
       
-        for key in p:
+      for p in Positions: #This leads to 'Surname' being requested 3 times after 'empty' x2!
         
-          if Surname == p[key].lower():
-            print key + p[key]
+        if eval(Position) == p:
+          Surname = raw_input("Surname: ").lower()
+      
+          for key in p:
+        
+            if Surname == p[key].lower():
+              print key + p[key]
           
-          elif Surname == "":
-            print key + p[key]
+            elif Surname == "":
+              print key + p[key]
             
-      elif Position == "": #Empty case doesn't work!
-        Surname = raw_input("Surname: ").lower()
-      
-        for c in Companies:
+        elif eval(Position) == empty: 
+          Surname = raw_input("Surname: ").lower()
         
-          for key in c:
+          for key in p:
           
-            if Surname == c[key].lower():
-              print key + c[key]
+            if Surname == p[key].lower():
+              print key + p[key]
             
             elif Surname == "":
               return "I can't help you if you don't give me any information."
