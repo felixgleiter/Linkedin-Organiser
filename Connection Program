@@ -11,22 +11,29 @@ count += 1"""
 
 empty = {}
 blattler = {'Daniel ' : 'Blattler', 'Nathalie ' : 'Breuer', 'Mrinal ' : 'Madina', 'David ' : 'Brown', 'Stephan ' : 'Hammes', 'Nina ' : 'Schu', 'David ' : 'Keene'}
-Companies = [blattler]
-director = {'Daniel ' : 'Blattler'}
+inside_the_box = {'Peter ' : 'Blenkharn', 'Anthony ' : 'Howgego'}
+Companies = [blattler, inside_the_box]
+managing_director = {'Daniel ' : 'Blattler', 'Peter ' : 'Blenkharn'}
+creative_director = {'Stephan ' : 'Hammes'}
+lead_developer = {'Anthony ' : 'Howgego'}
 project_manager = {'Nathalie ' : 'Breuer', 'Nina ' : 'Schu'}
 client_relations = {'David ' : 'Keene', 'David ' : 'Brown'} #Two identical keys means only one value is returned!
-Positions = [director, project_manager, client_relations]
+Positions = [managing_director, creative_director, lead_developer, project_manager, client_relations]
   
 # Basic Query for the SQL table
 
 def Query():
   
-  print "Hello! Please type 'empty' where any value is unknown."
+  #import re
+  
+  #C = re.compile(Companies)
+  
+  print "Hello! Please type 'empty' where any value is unknown. Also please use '_' for spaces."
   
   Company = raw_input("Company: ").lower()
   
   for c in Companies:
-    
+    #print C.match(c)
     if eval(Company) == c: 
       Position = raw_input("Position: ").lower()
       
@@ -57,7 +64,7 @@ def Query():
     elif eval(Company) == empty: 
       Position = raw_input("Position: ").lower()
       
-      for p in Positions: #This leads to 'Surname' being requested 3 times after 'empty' x2!
+      for p in Positions: #This leads to 'Surname' being requested 4 times after 'empty' x2!
         
         if eval(Position) == p:
           Surname = raw_input("Surname: ").lower()
@@ -81,7 +88,7 @@ def Query():
             elif Surname == "":
               return "I can't help you if you don't give me any information."
           
-    elif eval(Company) not in Companies:
-      return "I'm afraid I don't know that company. Please restart and try again."
+    #elif eval(Company) != c and eval(Company) != empty: #Doesn't work!
+      #return "I'm afraid I don't know that company. Please restart and try again."
 
 print Query()
