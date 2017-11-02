@@ -31,13 +31,13 @@ let Query = () => {
   
   for (let companyIndex = 0; companyIndex < Companies.length; companyIndex++) {
     if Company === Companies[companyIndex] { 
-      Position = raw_input("Position: ").lower()
+      let Position = prompt("Position: ").toLowerCase();
     
-      for p in Positions:
+      for (let positionIndex = 0; positionIndex < Positions.length; positionIndex++) {
         
-        if eval(Position) === p {
-          Surname = raw_input("Surname: ").lower()
-          }
+        if Position === Positions[positionIndex] { 
+          
+          {Surname = raw_input("Surname: ").lower()};
           
           for key in c and p:
       
@@ -48,7 +48,8 @@ let Query = () => {
             else if Surname === null {
               console.log(key + c[key])    
               }
-              
+        }
+        
         else if eval(Position) === null {
           Surname = raw_input("Surname: ").lower()
           }
@@ -62,6 +63,7 @@ let Query = () => {
             else if Surname === null {
               console.log(key + c[key])
               }
+        }
       }
       
     else if eval(Company) === null: 
