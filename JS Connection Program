@@ -27,7 +27,7 @@ let Query = () => {
   
   console.log("Hello! Please type 'empty' where any value is unknown. Also please use '_' for spaces.")
   
-  let Company = raw_input("Company: ").lower()
+  let Company = raw_input("Company: ").toLowerCase()
   
   for (let companyIndex = 0; companyIndex < Companies.length; companyIndex++) {
     if Company === Companies[companyIndex] { 
