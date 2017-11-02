@@ -1,1 +1,103 @@
+//CREATE TABLE connections (id INTEGER, first_name TEXT, last_name TEXT, email_address TEXT, company TEXT, position TEXT, connected_on TEXT, tags TEXT);
 
+// Converting the CSV file into an SQL table
+
+//SET count = 1
+//while count <= 5000:
+//INSERT INTO connections (id, first_name, last_name, email_address, company, position, connected_on, tags) VALUES (count, 'fn', 'ln', 'ea', 'com', 'pos', 'cn', 'ta');
+//count += 1
+
+// Data Lists for Companies, Positions etc.
+
+blattler = {'Daniel ' : 'Blattler', 'Nathalie ' : 'Breuer', 'Mrinal ' : 'Madina', 'David ' : 'Keene', 'Stephan ' : 'Hammes', 'Nina ' : 'Schu'}
+inside_the_box = {'Peter ' : 'Blenkharn', 'Anthony ' : 'Howgego'}
+Companies = [blattler, inside_the_box]
+managing_director = {'Daniel ' : 'Blattler'}
+lead_partner = {'Peter ' : 'Blenkharn'}
+creative_director = {'Stephan ' : 'Hammes'}
+lead_developer = {'Anthony ' : 'Howgego'}
+sales_director = {'Mrinal ' : 'Madina'}
+project_manager = {'Nathalie ' : 'Breuer', 'Nina ' : 'Schu'}
+client_relations = {'David ' : 'Keene'} #Two identical keys means only one value is returned!
+Positions = [managing_director, lead_partner, creative_director, lead_developer, sales_director, project_manager, client_relations]
+  
+# Basic Query for the SQL table
+
+def Query():
+  
+  console.log("Hello! Please type 'empty' where any value is unknown. Also please use '_' for spaces.")
+  
+  Company = raw_input("Company: ").lower()
+  
+  for c in Companies:
+    if eval(Company) === c { 
+      Position = raw_input("Position: ").lower()
+      }
+      
+      for p in Positions:
+        
+        if eval(Position) === p {
+          Surname = raw_input("Surname: ").lower()
+          }
+          
+          for key in c and p:
+      
+            if Surname === c[key].lower() {
+              console.log(key + c[key])
+              }
+              
+            else if Surname === null {
+              console.log(key + c[key])    
+              }
+              
+        elif eval(Position) === null {
+          Surname = raw_input("Surname: ").lower()
+          }
+          
+          for key in c:
+        
+            if Surname === c[key].lower() {
+              console.log(key + c[key])
+              }
+              
+            else if Surname === null {
+              console.log(key + c[key])
+              }
+              
+    elif eval(Company) === null: 
+      Position = raw_input("Position: ").lower()
+      
+      for p in Positions: #This leads to 'Surname' being requested 6 times after 'empty' x2!
+        
+        if eval(Position) === p {
+          Surname = raw_input("Surname: ").lower()
+          }
+          
+          for key in p:
+        
+            if Surname === p[key].lower() {
+              console.log(key + p[key])
+              }
+              
+            elif Surname === null {
+              console.log(key + p[key])
+              }
+              
+        elif eval(Position) === null { 
+          Surname = raw_input("Surname: ").lower()
+          }
+          
+          for key in p:
+          
+            if Surname === p[key].lower() {
+              console.log(key + p[key])
+              }
+            
+            elif Surname === null {
+              console.log("I can't help you if you don't give me any information.")
+              }
+              
+    #elif eval(Company) != c and eval(Company) != empty: #Doesn't work!
+      #return "I'm afraid I don't know that company. Please restart and try again."
+
+print Query()
