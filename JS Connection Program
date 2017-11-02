@@ -21,7 +21,7 @@ project_manager = {'Nathalie ' : 'Breuer', 'Nina ' : 'Schu'}
 client_relations = {'David ' : 'Keene'} //Two identical keys means only one value is returned!
 Positions = [managing_director, lead_partner, creative_director, lead_developer, sales_director, project_manager, client_relations]
   
-# Basic Query for the SQL table
+// Basic Query for the SQL table
 
 def Query():
   
@@ -97,7 +97,7 @@ def Query():
               console.log("I can't help you if you don't give me any information.")
               }
               
-    #elif eval(Company) != c and eval(Company) != empty: #Doesn't work!
-      #return "I'm afraid I don't know that company. Please restart and try again."
+    //elif eval(Company) != c and eval(Company) != empty: //Doesn't work!
+      //return "I'm afraid I don't know that company. Please restart and try again."
 
 print Query()
