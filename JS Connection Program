@@ -9,17 +9,17 @@
 
 // Data Lists for Companies, Positions etc.
 
-blattler = {'Daniel ' : 'Blattler', 'Nathalie ' : 'Breuer', 'Mrinal ' : 'Madina', 'David ' : 'Keene', 'Stephan ' : 'Hammes', 'Nina ' : 'Schu'}
-inside_the_box = {'Peter ' : 'Blenkharn', 'Anthony ' : 'Howgego'}
-Companies = [blattler, inside_the_box]
-managing_director = {'Daniel ' : 'Blattler'}
-lead_partner = {'Peter ' : 'Blenkharn'}
-creative_director = {'Stephan ' : 'Hammes'}
-lead_developer = {'Anthony ' : 'Howgego'}
-sales_director = {'Mrinal ' : 'Madina'}
-project_manager = {'Nathalie ' : 'Breuer', 'Nina ' : 'Schu'}
-client_relations = {'David ' : 'Keene'} //Two identical keys means only one value is returned!
-Positions = [managing_director, lead_partner, creative_director, lead_developer, sales_director, project_manager, client_relations]
+const blattler = {'Daniel ' : 'Blattler', 'Nathalie ' : 'Breuer', 'Mrinal ' : 'Madina', 'David ' : 'Keene', 'Stephan ' : 'Hammes', 'Nina ' : 'Schu'}
+const inside_the_box = {'Peter ' : 'Blenkharn', 'Anthony ' : 'Howgego'}
+const Companies = [blattler, inside_the_box]
+const managing_director = {'Daniel ' : 'Blattler'}
+const lead_partner = {'Peter ' : 'Blenkharn'}
+const creative_director = {'Stephan ' : 'Hammes'}
+const lead_developer = {'Anthony ' : 'Howgego'}
+const sales_director = {'Mrinal ' : 'Madina'}
+const project_manager = {'Nathalie ' : 'Breuer', 'Nina ' : 'Schu'}
+const client_relations = {'David ' : 'Keene'} //Two identical keys means only one value is returned!
+const Positions = [managing_director, lead_partner, creative_director, lead_developer, sales_director, project_manager, client_relations]
   
 // Basic Query for the SQL table
 
