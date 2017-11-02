@@ -23,7 +23,7 @@ Positions = [managing_director, lead_partner, creative_director, lead_developer,
   
 // Basic Query for the SQL table
 
-def Query():
+let Query = () => {
   
   console.log("Hello! Please type 'empty' where any value is unknown. Also please use '_' for spaces.")
   
@@ -99,5 +99,6 @@ def Query():
               
     //elif eval(Company) != c and eval(Company) != empty: //Doesn't work!
       //return "I'm afraid I don't know that company. Please restart and try again."
+}
 
-print Query()
+Query()
