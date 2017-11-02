@@ -32,14 +32,14 @@ let Query = () => {
   
   for (let companyIndex = 0; companyIndex < Companies.length; companyIndex++) {
     
-    let Companies[companyIndex] = c;
+    let c = Companies[companyIndex];
     
     if eval(Company) === c { 
       let Position = prompt("Position: ").toLowerCase();
     
       for (let positionIndex = 0; positionIndex < Positions.length; positionIndex++) {
         
-        let Positions[positionIndex] = p;
+        let p = Positions[positionIndex];
         
         if eval(Position) === p { 
           let Surname = prompt("Surname: ").toLowerCase();
@@ -71,7 +71,7 @@ let Query = () => {
       
       for (let positionIndex = 0; positionIndex < Positions.length; positionIndex++) { //This leads to 'Surname' being requested 6 times after 'empty' x2!
         
-        let Positions[positionIndex] = p;
+        let p = Positions[positionIndex];
         
         if eval(Position) === p {
           let Surname = prompt("Surname: ").toLowerCase();
@@ -103,3 +103,4 @@ let Query = () => {
 }
 
 Query()
+
