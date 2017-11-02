@@ -18,7 +18,7 @@ creative_director = {'Stephan ' : 'Hammes'}
 lead_developer = {'Anthony ' : 'Howgego'}
 sales_director = {'Mrinal ' : 'Madina'}
 project_manager = {'Nathalie ' : 'Breuer', 'Nina ' : 'Schu'}
-client_relations = {'David ' : 'Keene'} #Two identical keys means only one value is returned!
+client_relations = {'David ' : 'Keene'} //Two identical keys means only one value is returned!
 Positions = [managing_director, lead_partner, creative_director, lead_developer, sales_director, project_manager, client_relations]
   
 # Basic Query for the SQL table
@@ -67,7 +67,7 @@ def Query():
     elif eval(Company) === null: 
       Position = raw_input("Position: ").lower()
       
-      for p in Positions: #This leads to 'Surname' being requested 6 times after 'empty' x2!
+      for p in Positions: //This leads to 'Surname' being requested 6 times after 'empty' x2!
         
         if eval(Position) === p {
           Surname = raw_input("Surname: ").lower()
