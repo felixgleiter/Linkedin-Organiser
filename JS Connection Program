@@ -50,7 +50,7 @@ let Query = () => {
               console.log(key + c[key])    
               }
               
-        elif eval(Position) === null {
+        else if eval(Position) === null {
           Surname = raw_input("Surname: ").lower()
           }
           
@@ -64,7 +64,7 @@ let Query = () => {
               console.log(key + c[key])
               }
               
-    elif eval(Company) === null: 
+    else if eval(Company) === null: 
       Position = raw_input("Position: ").lower()
       
       for p in Positions: //This leads to 'Surname' being requested 6 times after 'empty' x2!
@@ -79,11 +79,11 @@ let Query = () => {
               console.log(key + p[key])
               }
               
-            elif Surname === null {
+            else if Surname === null {
               console.log(key + p[key])
               }
               
-        elif eval(Position) === null { 
+        else if eval(Position) === null { 
           Surname = raw_input("Surname: ").lower()
           }
           
@@ -93,7 +93,7 @@ let Query = () => {
               console.log(key + p[key])
               }
             
-            elif Surname === null {
+            else if Surname === null {
               console.log("I can't help you if you don't give me any information.")
               }
               
