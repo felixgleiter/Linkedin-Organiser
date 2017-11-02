@@ -36,69 +36,60 @@ let Query = () => {
       for (let positionIndex = 0; positionIndex < Positions.length; positionIndex++) {
         
         if Position === Positions[positionIndex] { 
-          
-          {Surname = raw_input("Surname: ").lower()};
+          let Surname = prompt("Surname: ").toLowerCase();
           
           for key in c and p:
       
-            if Surname === c[key].lower() {
-              console.log(key + c[key])
-              }
+            if Surname === c[key].toLowerCase() 
+              {console.log(key + c[key])}
               
-            else if Surname === null {
-              console.log(key + c[key])    
-              }
+            else if Surname === null 
+              {console.log(key + c[key])}
         }
         
-        else if eval(Position) === null {
-          Surname = raw_input("Surname: ").lower()
-          }
+        else if Position === null {
+          let Surname = prompt("Surname: ").toLowerCase();
           
           for key in c:
         
-            if Surname === c[key].lower() {
-              console.log(key + c[key])
-              }
+            if Surname === c[key].toLowerCase() 
+              {console.log(key + c[key])}
               
-            else if Surname === null {
-              console.log(key + c[key])
-              }
+            else if Surname === null 
+              {console.log(key + c[key])}
         }
       }
       
-    else if eval(Company) === null: 
-      Position = raw_input("Position: ").lower()
+    else if Company === null {
+      let Position = prompt("Position: ").toLowerCase();
       
-      for p in Positions: //This leads to 'Surname' being requested 6 times after 'empty' x2!
+      for (let positionIndex = 0; positionIndex < Positions.length; positionIndex++) { //This leads to 'Surname' being requested 6 times after 'empty' x2!
         
         if eval(Position) === p {
-          Surname = raw_input("Surname: ").lower()
-          }
+          let Surname = prompt("Surname: ").toLowerCase();
           
           for key in p:
         
-            if Surname === p[key].lower() {
-              console.log(key + p[key])
-              }
+            if Surname === p[key].toLowerCase() 
+              {console.log(key + p[key])}
               
-            else if Surname === null {
-              console.log(key + p[key])
-              }
+            else if Surname === null 
+              {console.log(key + p[key])}
+        }
               
-        else if eval(Position) === null { 
-          Surname = raw_input("Surname: ").lower()
-          }
+        else if eval(Position) === null {
+          let Surname = prompt("Surname: ").toLowerCase();
           
           for key in p:
           
-            if Surname === p[key].lower() {
-              console.log(key + p[key])
-              }
+            if Surname === p[key].toLowerCase() 
+              {console.log(key + p[key])}
             
-            else if Surname === null {
-              console.log("I can't help you if you don't give me any information.")
-              }
-      }       
+            else if Surname === null 
+              {console.log("I can't help you if you don't give me any information.")}
+        }
+      }
+    }
     //elif eval(Company) != c and eval(Company) != empty: //Doesn't work!
       //return "I'm afraid I don't know that company. Please restart and try again."
 }
