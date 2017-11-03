@@ -7,19 +7,22 @@
 //INSERT INTO connections (id, first_name, last_name, email_address, company, position, connected_on, tags) VALUES (count, 'fn', 'ln', 'ea', 'com', 'pos', 'cn', 'ta');
 //count += 1
 
-// Data Lists for Companies, Positions etc.
+// Alternative JS object method for data input
 
-const blattler = {'Daniel ' : 'Blattler', 'Nathalie ' : 'Breuer', 'Mrinal ' : 'Madina', 'David ' : 'Keene', 'Stephan ' : 'Hammes', 'Nina ' : 'Schu'}
-const inside_the_box = {'Peter ' : 'Blenkharn', 'Anthony ' : 'Howgego'}
-const Companies = [blattler, inside_the_box]
-const managing_director = {'Daniel ' : 'Blattler'}
-const lead_partner = {'Peter ' : 'Blenkharn'}
-const creative_director = {'Stephan ' : 'Hammes'}
-const lead_developer = {'Anthony ' : 'Howgego'}
-const sales_director = {'Mrinal ' : 'Madina'}
-const project_manager = {'Nathalie ' : 'Breuer', 'Nina ' : 'Schu'}
-const client_relations = {'David ' : 'Keene'} //Two identical keys means only one value is returned!
-const Positions = [managing_director, lead_partner, creative_director, lead_developer, sales_director, project_manager, client_relations]
+let daniel_blattler = {firstname: 'Daniel', surname: 'Blattler', emailaddress: '', company: 'blattler', position: 'managing director', connectedon: '', tags: ''};
+let nathalie_breuer = {firstname: 'Nathalie', surname: 'Breuer', emailaddress: '', company: 'blattler', position: 'project manager', connectedon: '', tags: ''};
+let mrinal_madina = {firstname: 'Mrinal', surname: 'Madina', emailaddress: '', company: 'blattler', position: 'sales director', connectedon: '', tags: ''};
+let david_keene = {firstname: 'David', surname: 'Keene', emailaddress: '', company: 'blattler', position: 'client relations', connectedon: '', tags: ''};
+let stephan_hammes = {firstname: 'Stephan', surname: 'Hammes', emailaddress: '', company: 'blattler', position: 'creative director', connectedon: '', tags: ''};
+let nina_schu = {firstname: 'Nina', surname: 'Schu', emailaddress: '', company: 'blattler', position: 'project manager', connectedon: '', tags: ''};
+let peter_blenkharn = {firstname: 'Peter', surname: 'Blenkharn', emailaddress: '', company: 'inside the box', position: 'lead partner', connectedon: '', tags: ''};
+let anthony_howgego = {firstname: 'Anthony', surname: 'Howgego', emailaddress: '', company: 'inside the box', position: 'lead developer', connectedon: '', tags: ''};
+//let  = {firstname: '', surname: '', emailaddress: '', company: '', position: '', connectedon: '', tags: ''};
+//let  = {firstname: '', surname: '', emailaddress: '', company: '', position: '', connectedon: '', tags: ''};
+//let  = {firstname: '', surname: '', emailaddress: '', company: '', position: '', connectedon: '', tags: ''};
+//let  = {firstname: '', surname: '', emailaddress: '', company: '', position: '', connectedon: '', tags: ''};
+let Companies = ['blattler', 'inside the box'];
+let Positions = ['managing director', 'project manager', 'sales director', 'client relations', 'creative director', 'lead partner', 'lead developer'];
   
 // Basic Query for the SQL table
 
@@ -34,14 +37,18 @@ let Query = () => {
     
     let c = Companies[companyIndex];
     
-    if eval(Company) === c { 
+    if Company === c {
+    
+      prompt("Position: ").toLowerCase();
       let Position = prompt("Position: ").toLowerCase();
     
       for (let positionIndex = 0; positionIndex < Positions.length; positionIndex++) {
         
         let p = Positions[positionIndex];
         
-        if eval(Position) === p { 
+        if Position === p { 
+        
+          prompt("Surname: ").toLowerCase();
           let Surname = prompt("Surname: ").toLowerCase();
           
           for key in c and p:
@@ -53,7 +60,9 @@ let Query = () => {
               {console.log(key + c[key])}
         }
         
-        else if eval(Position) === null {
+        else if Position === null {
+        
+          prompt("Surname: ").toLowerCase();
           let Surname = prompt("Surname: ").toLowerCase();
           
           for key in c:
@@ -66,14 +75,18 @@ let Query = () => {
         }
       }
       
-    else if eval(Company) === null {
+    else if Company === null {
+    
+      prompt("Position: ").toLowerCase();
       let Position = prompt("Position: ").toLowerCase();
       
       for (let positionIndex = 0; positionIndex < Positions.length; positionIndex++) { //This leads to 'Surname' being requested 6 times after 'empty' x2!
         
         let p = Positions[positionIndex];
         
-        if eval(Position) === p {
+        if Position === p {
+        
+          prompt("Surname: ").toLowerCase();
           let Surname = prompt("Surname: ").toLowerCase();
           
           for key in p:
@@ -85,7 +98,9 @@ let Query = () => {
               {console.log(key + p[key])}
         }
               
-        else if eval(Position) === null {
+        else if Position === null {
+        
+          prompt("Surname: ").toLowerCase();
           let Surname = prompt("Surname: ").toLowerCase();
           
           for key in p:
