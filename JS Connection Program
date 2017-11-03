@@ -67,12 +67,12 @@ let Query = () => {
             if (Surname === cp['surname'].toLowerCase()) 
               {console.log(cp['firstname'] + cp['surname'])}
               
-            else if (Surname === null) 
+            else if (Surname === "") 
               {console.log(cp['firstname'] + cp['surname'])}
           }
         }
         
-        else if (Position === null) {
+        else if (Position === "") {
         
           prompt("Surname: ").toLowerCase();
           let Surname = prompt("Surname: ").toLowerCase();
@@ -82,13 +82,14 @@ let Query = () => {
             if (Surname === c[companyIndex]['surname'].toLowerCase()) 
               {console.log(c[companyIndex]['firstname'] + c[companyIndex]['surname'])}
               
-            else if (Surname === null) 
+            else if (Surname === "") 
               {console.log(c[companyIndex]['firstname'] + c[companyIndex]['surname'])}
           }
         }
       }
+    }
       
-    else if (Company === null) {
+    else if (Company === "") {
     
       prompt("Position: ").toLowerCase();
       let Position = prompt("Position: ").toLowerCase();
@@ -102,30 +103,33 @@ let Query = () => {
           prompt("Surname: ").toLowerCase();
           let Surname = prompt("Surname: ").toLowerCase();
           
-          for key in p:
+          for (let positionIndex = 0; positionIndex < p.length; positionIndex++) {
         
-            if (Surname === p[key].toLowerCase()) 
-              {console.log(key + p[key])}
+            if (Surname === p[positionIndex]['surname'].toLowerCase()) 
+              {console.log(p[positionIndex]['firstname'] + p[positionIndex]['surname'])}
               
-            else if (Surname === null) 
-              {console.log(key + p[key])}
+            else if (Surname === "") 
+              {console.log(p[positionIndex]['firstname'] + p[positionIndex]['surname'])}
+          }
         }
               
-        else if (Position === null) {
+        else if (Position === "") {
         
           prompt("Surname: ").toLowerCase();
           let Surname = prompt("Surname: ").toLowerCase();
           
-          for key in p:
-          
-            if (Surname === p[key].toLowerCase()) 
-              {console.log(key + p[key])}
-            
-            else if (Surname === null) 
-              {console.log("I can't help you if you don't give me any information.")}
+          for (let positionIndex = 0; positionIndex < p.length; positionIndex++) {
+        
+            if (Surname === p[positionIndex]['surname'].toLowerCase()) 
+              {console.log(p[positionIndex]['firstname'] + p[positionIndex]['surname'])}
+              
+            else if (Surname === "") 
+              {console.log(p[positionIndex]['firstname'] + p[positionIndex]['surname'])}
+          }
         }
       }
     }
+  }
     //elif eval(Company) != c and eval(Company) != empty: //Doesn't work!
       //return "I'm afraid I don't know that company. Please restart and try again."
 }
