@@ -37,7 +37,7 @@ let Query = () => {
     
     let c = Companies[companyIndex];
     
-    if Company === c {
+    if (Company === c) {
     
       prompt("Position: ").toLowerCase();
       let Position = prompt("Position: ").toLowerCase();
@@ -46,36 +46,36 @@ let Query = () => {
         
         let p = Positions[positionIndex];
         
-        if Position === p { 
+        if (Position === p) { 
         
           prompt("Surname: ").toLowerCase();
           let Surname = prompt("Surname: ").toLowerCase();
           
           for key in c and p:
       
-            if Surname === c[key].toLowerCase() 
+            if (Surname === c[key].toLowerCase()) 
               {console.log(key + c[key])}
               
-            else if Surname === null 
+            else if (Surname === null) 
               {console.log(key + c[key])}
         }
         
-        else if Position === null {
+        else if (Position === null) {
         
           prompt("Surname: ").toLowerCase();
           let Surname = prompt("Surname: ").toLowerCase();
           
           for key in c:
         
-            if Surname === c[key].toLowerCase() 
+            if (Surname === c[key].toLowerCase()) 
               {console.log(key + c[key])}
               
-            else if Surname === null 
+            else if (Surname === null) 
               {console.log(key + c[key])}
         }
       }
       
-    else if Company === null {
+    else if (Company === null) {
     
       prompt("Position: ").toLowerCase();
       let Position = prompt("Position: ").toLowerCase();
@@ -84,31 +84,31 @@ let Query = () => {
         
         let p = Positions[positionIndex];
         
-        if Position === p {
+        if (Position === p) {
         
           prompt("Surname: ").toLowerCase();
           let Surname = prompt("Surname: ").toLowerCase();
           
           for key in p:
         
-            if Surname === p[key].toLowerCase() 
+            if (Surname === p[key].toLowerCase()) 
               {console.log(key + p[key])}
               
-            else if Surname === null 
+            else if (Surname === null) 
               {console.log(key + p[key])}
         }
               
-        else if Position === null {
+        else if (Position === null) {
         
           prompt("Surname: ").toLowerCase();
           let Surname = prompt("Surname: ").toLowerCase();
           
           for key in p:
           
-            if Surname === p[key].toLowerCase() 
+            if (Surname === p[key].toLowerCase()) 
               {console.log(key + p[key])}
             
-            else if Surname === null 
+            else if (Surname === null) 
               {console.log("I can't help you if you don't give me any information.")}
         }
       }
@@ -118,3 +118,4 @@ let Query = () => {
 }
 
 Query()
+
