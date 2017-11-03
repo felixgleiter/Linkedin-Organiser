@@ -9,17 +9,14 @@
 
 // Alternative JS object method for data input
 
-let daniel_blattler = {firstname: 'Daniel', surname: 'Blattler', emailaddress: '', company: 'blattler', position: 'managing director', connectedon: '', tags: ''};
-let nathalie_breuer = {firstname: 'Nathalie', surname: 'Breuer', emailaddress: '', company: 'blattler', position: 'project manager', connectedon: '', tags: ''};
-let mrinal_madina = {firstname: 'Mrinal', surname: 'Madina', emailaddress: '', company: 'blattler', position: 'sales director', connectedon: '', tags: ''};
-let david_keene = {firstname: 'David', surname: 'Keene', emailaddress: '', company: 'blattler', position: 'client relations', connectedon: '', tags: ''};
-let stephan_hammes = {firstname: 'Stephan', surname: 'Hammes', emailaddress: '', company: 'blattler', position: 'creative director', connectedon: '', tags: ''};
-let nina_schu = {firstname: 'Nina', surname: 'Schu', emailaddress: '', company: 'blattler', position: 'project manager', connectedon: '', tags: ''};
-let peter_blenkharn = {firstname: 'Peter', surname: 'Blenkharn', emailaddress: '', company: 'inside the box', position: 'lead partner', connectedon: '', tags: ''};
-let anthony_howgego = {firstname: 'Anthony', surname: 'Howgego', emailaddress: '', company: 'inside the box', position: 'lead developer', connectedon: '', tags: ''};
-//let  = {firstname: '', surname: '', emailaddress: '', company: '', position: '', connectedon: '', tags: ''};
-//let  = {firstname: '', surname: '', emailaddress: '', company: '', position: '', connectedon: '', tags: ''};
-//let  = {firstname: '', surname: '', emailaddress: '', company: '', position: '', connectedon: '', tags: ''};
+let daniel_blattler = {firstname: 'Daniel ', surname: 'Blattler', emailaddress: '', company: 'blattler', position: 'managing director', connectedon: '', tags: ''};
+let nathalie_breuer = {firstname: 'Nathalie ', surname: 'Breuer', emailaddress: '', company: 'blattler', position: 'project manager', connectedon: '', tags: ''};
+let mrinal_madina = {firstname: 'Mrinal ', surname: 'Madina', emailaddress: '', company: 'blattler', position: 'sales director', connectedon: '', tags: ''};
+let david_keene = {firstname: 'David ', surname: 'Keene', emailaddress: '', company: 'blattler', position: 'client relations', connectedon: '', tags: ''};
+let stephan_hammes = {firstname: 'Stephan ', surname: 'Hammes', emailaddress: '', company: 'blattler', position: 'creative director', connectedon: '', tags: ''};
+let nina_schu = {firstname: 'Nina ', surname: 'Schu', emailaddress: '', company: 'blattler', position: 'project manager', connectedon: '', tags: ''};
+let peter_blenkharn = {firstname: 'Peter ', surname: 'Blenkharn', emailaddress: '', company: 'inside the box', position: 'lead partner', connectedon: '', tags: ''};
+let anthony_howgego = {firstname: 'Anthony ', surname: 'Howgego', emailaddress: '', company: 'inside the box', position: 'lead developer', connectedon: '', tags: ''};
 //let  = {firstname: '', surname: '', emailaddress: '', company: '', position: '', connectedon: '', tags: ''};
 let blattler = [daniel_blattler, nathalie_breuer, mrinal_madina, david_keene, stephan_hammes, nina_schu];
 let inside_the_box = [peter_blenkharn, anthony_howgego];
@@ -42,31 +39,37 @@ let Query = () => {
   prompt("Company: ").toLowerCase();
   let Company = prompt("Company: ").toLowerCase();
   
-  for (let companyIndex = 0; companyIndex < Companies.length; companyIndex++) {
+  for (let companiesIndex = 0; companiesIndex < Companies.length; companiesIndex++) {
     
-    let c = Companies[companyIndex];
+    let c = Companies[companiesIndex];
     
     if (Company === c) {
     
       prompt("Position: ").toLowerCase();
       let Position = prompt("Position: ").toLowerCase();
     
-      for (let positionIndex = 0; positionIndex < Positions.length; positionIndex++) {
+      for (let positionsIndex = 0; positionsIndex < Positions.length; positionsIndex++) {
         
-        let p = Positions[positionIndex];
+        let p = Positions[positionsIndex];
         
         if (Position === p) { 
-        
+          
+          let CompanyPosition = (c, p) => 
+            {c.filter((name) => p.includes(name))};
+          
           prompt("Surname: ").toLowerCase();
           let Surname = prompt("Surname: ").toLowerCase();
           
-          for key in c && p:
-      
-            if (Surname === c[key].toLowerCase()) 
-              {console.log(key + c[key])}
+          for (let companyPositionIndex = 0; companyPositionIndex < CompanyPosition.length; companyPositionIndex++) {
+            
+            let cp = CompanyPosition(c, p)[companyPositionIndex];
+            
+            if (Surname === cp['surname'].toLowerCase()) 
+              {console.log(cp['firstname'] + cp['surname'])}
               
             else if (Surname === null) 
-              {console.log(key + c[key])}
+              {console.log(cp['firstname'] + cp['surname'])}
+          }
         }
         
         else if (Position === null) {
@@ -74,13 +77,14 @@ let Query = () => {
           prompt("Surname: ").toLowerCase();
           let Surname = prompt("Surname: ").toLowerCase();
           
-          for key in c:
+          for (let companyIndex = 0; companyIndex < c.length; companyIndex++) {
         
-            if (Surname === c[key].toLowerCase()) 
-              {console.log(key + c[key])}
+            if (Surname === c[companyIndex]['surname'].toLowerCase()) 
+              {console.log(c[companyIndex]['firstname'] + c[companyIndex]['surname'])}
               
             else if (Surname === null) 
-              {console.log(key + c[key])}
+              {console.log(c[companyIndex]['firstname'] + c[companyIndex]['surname'])}
+          }
         }
       }
       
@@ -127,4 +131,3 @@ let Query = () => {
 }
 
 Query()
-
