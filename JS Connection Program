@@ -21,8 +21,17 @@ let anthony_howgego = {firstname: 'Anthony', surname: 'Howgego', emailaddress: '
 //let  = {firstname: '', surname: '', emailaddress: '', company: '', position: '', connectedon: '', tags: ''};
 //let  = {firstname: '', surname: '', emailaddress: '', company: '', position: '', connectedon: '', tags: ''};
 //let  = {firstname: '', surname: '', emailaddress: '', company: '', position: '', connectedon: '', tags: ''};
-let Companies = ['blattler', 'inside the box'];
-let Positions = ['managing director', 'project manager', 'sales director', 'client relations', 'creative director', 'lead partner', 'lead developer'];
+let blattler = [daniel_blattler, nathalie_breuer, mrinal_madina, david_keene, stephan_hammes, nina_schu];
+let inside_the_box = [peter_blenkharn, anthony_howgego];
+let managing_directors = [daniel_blattler];
+let project_managers = [nathalie_breuer, nina_schu];
+let sales_directors = [mrinal_madina];
+let client_relations = [david_keene];
+let creative_directors = [stephan_hammes];
+let lead_partners = [peter_blenkharn];
+let lead_developers = [anthony_howgego];
+let Companies = [blattler, inside_the_box];
+let Positions = [managing_directors, project_managers, sales_directors, client_relations, creative_directors, lead_partners, lead_developers];
   
 // Basic Query for the SQL table
 
@@ -51,7 +60,7 @@ let Query = () => {
           prompt("Surname: ").toLowerCase();
           let Surname = prompt("Surname: ").toLowerCase();
           
-          for key in c and p:
+          for key in c && p:
       
             if (Surname === c[key].toLowerCase()) 
               {console.log(key + c[key])}
