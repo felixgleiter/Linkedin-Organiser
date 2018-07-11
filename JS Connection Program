@@ -9,25 +9,25 @@
 
 // Alternative JS object method for data input
 
-let daniel_blattler = {firstname: 'Daniel ', surname: 'Blattler', emailaddress: '', company: 'blattler', position: 'managing director', connectedon: '', tags: ''};
-let nathalie_breuer = {firstname: 'Nathalie ', surname: 'Breuer', emailaddress: '', company: 'blattler', position: 'project manager', connectedon: '', tags: ''};
-let mrinal_madina = {firstname: 'Mrinal ', surname: 'Madina', emailaddress: '', company: 'blattler', position: 'sales director', connectedon: '', tags: ''};
-let david_keene = {firstname: 'David ', surname: 'Keene', emailaddress: '', company: 'blattler', position: 'client relations', connectedon: '', tags: ''};
-let stephan_hammes = {firstname: 'Stephan ', surname: 'Hammes', emailaddress: '', company: 'blattler', position: 'creative director', connectedon: '', tags: ''};
-let nina_schu = {firstname: 'Nina ', surname: 'Schu', emailaddress: '', company: 'blattler', position: 'project manager', connectedon: '', tags: ''};
-let peter_blenkharn = {firstname: 'Peter ', surname: 'Blenkharn', emailaddress: '', company: 'inside the box', position: 'lead partner', connectedon: '', tags: ''};
-let anthony_howgego = {firstname: 'Anthony ', surname: 'Howgego', emailaddress: '', company: 'inside the box', position: 'lead developer', connectedon: '', tags: ''};
+let d_b = {firstname: 'D ', surname: 'B', emailaddress: '', company: 'B', position: 'managing director', connectedon: '', tags: ''};
+let n_b = {firstname: 'N ', surname: 'B', emailaddress: '', company: 'B', position: 'project manager', connectedon: '', tags: ''};
+let m_m = {firstname: 'M ', surname: 'M', emailaddress: '', company: 'B', position: 'sales director', connectedon: '', tags: ''};
+let d_k = {firstname: 'D ', surname: 'K', emailaddress: '', company: 'B', position: 'client relations', connectedon: '', tags: ''};
+let s_h = {firstname: 'S ', surname: 'H', emailaddress: '', company: 'B', position: 'creative director', connectedon: '', tags: ''};
+let n_s = {firstname: 'N ', surname: 'S', emailaddress: '', company: 'B', position: 'project manager', connectedon: '', tags: ''};
+let p_b = {firstname: 'P ', surname: 'B', emailaddress: '', company: 'i_t_b', position: 'lead partner', connectedon: '', tags: ''};
+let a_h = {firstname: 'A ', surname: 'H', emailaddress: '', company: 'i_t_b', position: 'lead developer', connectedon: '', tags: ''};
 //let  = {firstname: '', surname: '', emailaddress: '', company: '', position: '', connectedon: '', tags: ''};
-let blattler = [daniel_blattler, nathalie_breuer, mrinal_madina, david_keene, stephan_hammes, nina_schu];
-let inside_the_box = [peter_blenkharn, anthony_howgego];
-let managing_directors = [daniel_blattler];
-let project_managers = [nathalie_breuer, nina_schu];
-let sales_directors = [mrinal_madina];
-let client_relations = [david_keene];
-let creative_directors = [stephan_hammes];
-let lead_partners = [peter_blenkharn];
-let lead_developers = [anthony_howgego];
-let Companies = [blattler, inside_the_box];
+let B = [d_b, n_b, m_m, d_k, s_h, n_s];
+let i_t_b = [p_b, a_h];
+let managing_directors = [d_b];
+let project_managers = [n_b, n_s];
+let sales_directors = [m_m];
+let client_relations = [d_k];
+let creative_directors = [s_h];
+let lead_partners = [p_b];
+let lead_developers = [a_h];
+let Companies = [B, i_t_b];
 let Positions = [managing_directors, project_managers, sales_directors, client_relations, creative_directors, lead_partners, lead_developers];
   
 // Basic Query for the SQL table
