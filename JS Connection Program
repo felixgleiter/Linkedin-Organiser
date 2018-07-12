@@ -7,27 +7,27 @@
 //INSERT INTO connections (id, first_name, last_name, email_address, company, position, connected_on, tags) VALUES (count, 'fn', 'ln', 'ea', 'com', 'pos', 'cn', 'ta');
 //count += 1
 
-// Alternative JS object method for data input
+// Sample information for Javascript only testing
 
-let d_b = {firstname: 'D ', surname: 'B', emailaddress: '', company: 'B', position: 'managing director', connectedon: '', tags: ''};
-let n_b = {firstname: 'N ', surname: 'B', emailaddress: '', company: 'B', position: 'project manager', connectedon: '', tags: ''};
-let m_m = {firstname: 'M ', surname: 'M', emailaddress: '', company: 'B', position: 'sales director', connectedon: '', tags: ''};
-let d_k = {firstname: 'D ', surname: 'K', emailaddress: '', company: 'B', position: 'client relations', connectedon: '', tags: ''};
-let s_h = {firstname: 'S ', surname: 'H', emailaddress: '', company: 'B', position: 'creative director', connectedon: '', tags: ''};
-let n_s = {firstname: 'N ', surname: 'S', emailaddress: '', company: 'B', position: 'project manager', connectedon: '', tags: ''};
-let p_b = {firstname: 'P ', surname: 'B', emailaddress: '', company: 'i_t_b', position: 'lead partner', connectedon: '', tags: ''};
-let a_h = {firstname: 'A ', surname: 'H', emailaddress: '', company: 'i_t_b', position: 'lead developer', connectedon: '', tags: ''};
+let c_a = {firstname: 'C ', surname: 'A', emailaddress: '', company: 'A', position: 'managing director', connectedon: '', tags: ''};
+let m_a = {firstname: 'M ', surname: 'A', emailaddress: '', company: 'A', position: 'project manager', connectedon: '', tags: ''};
+let l_l = {firstname: 'L ', surname: 'L', emailaddress: '', company: 'A', position: 'sales director', connectedon: '', tags: ''};
+let c_j = {firstname: 'C ', surname: 'J', emailaddress: '', company: 'A', position: 'client relations', connectedon: '', tags: ''};
+let r_g = {firstname: 'R ', surname: 'G', emailaddress: '', company: 'A', position: 'creative director', connectedon: '', tags: ''};
+let m_r = {firstname: 'M ', surname: 'R', emailaddress: '', company: 'A', position: 'project manager', connectedon: '', tags: ''};
+let o_a = {firstname: 'O ', surname: 'A', emailaddress: '', company: 'h_s_a', position: 'lead partner', connectedon: '', tags: ''};
+let z_g = {firstname: 'Z ', surname: 'G', emailaddress: '', company: 'h_s_a', position: 'lead developer', connectedon: '', tags: ''};
 //let  = {firstname: '', surname: '', emailaddress: '', company: '', position: '', connectedon: '', tags: ''};
-let B = [d_b, n_b, m_m, d_k, s_h, n_s];
-let i_t_b = [p_b, a_h];
-let managing_directors = [d_b];
-let project_managers = [n_b, n_s];
-let sales_directors = [m_m];
-let client_relations = [d_k];
-let creative_directors = [s_h];
-let lead_partners = [p_b];
-let lead_developers = [a_h];
-let Companies = [B, i_t_b];
+let A = [c_a, m_a, l_l, c_j, r_g, m_r];
+let i_t_b = [o_a, z_g];
+let managing_directors = [c_a];
+let project_managers = [m_a, m_r];
+let sales_directors = [l_l];
+let client_relations = [c_j];
+let creative_directors = [r_g];
+let lead_partners = [o_a];
+let lead_developers = [z_g];
+let Companies = [A, h_s_a];
 let Positions = [managing_directors, project_managers, sales_directors, client_relations, creative_directors, lead_partners, lead_developers];
   
 // Basic Query for the SQL table
@@ -94,9 +94,9 @@ let Query = () => {
       prompt("Position: ").toLowerCase();
       let Position = prompt("Position: ").toLowerCase();
       
-      for (var p in Positions) { //This leads to 'Surname' being requested 6 times after 'empty' x2!
+      for (var p in Positions) { 
         
-        //let p = Positions[positionIndex];
+        let p = Positions[positionIndex];
         
         if (Position === p) {
         
